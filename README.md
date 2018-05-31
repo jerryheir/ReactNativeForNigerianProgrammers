@@ -1,2 +1,2 @@
 # ReactNativeForNigerianProgrammers
-Just a very simple react-native projects
+Just a very simple react-native project. To begin you need to have the **yarn** (node package installer), **create-react-native-app** installed locally on your computer...
