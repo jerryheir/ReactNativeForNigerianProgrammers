@@ -22,7 +22,7 @@ export default class FirstListAtom extends React.Component {
             <Body style={styles.body}><Text style={styles.texty}>{this.props.items.name}</Text></Body>
             <Right>
                 <Thumbnail
-                    source={require(this.props.items.image)} 
+                    source={this.props.items.image} 
                     style={styles.anime}
                 />
             </Right>
