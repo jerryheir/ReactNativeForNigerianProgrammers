@@ -11,7 +11,7 @@ export default class FirstListAtom extends React.Component {
     }
   render() {
     return (
-        <ListItem onPress={this.props.onPress} style={styles.listItem} >
+        <ListItem onPress={this.onPress} style={styles.listItem} >
             <Left>
                 <LottieAnimation 
                     source={require('../Images/checked_done_.json')} 

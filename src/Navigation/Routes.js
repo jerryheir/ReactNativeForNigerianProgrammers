@@ -61,7 +61,7 @@ const viewBusinessStack = createBottomTabNavigator(
         paddingVertical: 8
       }
     },
-    animationEnabled: false,
+    animationEnabled: true,
     swipeEnabled: true
   }
 );
