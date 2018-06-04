@@ -14,7 +14,7 @@ import FirstTabScreen from './../Screen/FirstTabScreen';
 import SecondTabScreen from './../Screen/SecondTabScreen';
 import InnerFirstScreen from './../Screen/InnerFirstScreen';
 import InnerSecondScreen from './../Screen/InnerSecondScreen';
-import FirstListAtom from "../Atom/FirstListAtom";
+import FirstList from "./../Components/FirstList";
 
 import Sidebar from './Sidebar';
 import { color } from './../Style/Color';
@@ -69,9 +69,9 @@ const viewBusinessStack = createBottomTabNavigator(
 const businessStack = createStackNavigator(
   {
     ViewBusiness: viewBusinessStack,
+    FirstList: FirstList,
     InnerFirst: InnerFirstScreen,
     InnerSecond: InnerSecondScreen,
-    FirstList: FirstListAtom
   },
   {
     initialRouteName: 'ViewBusiness',

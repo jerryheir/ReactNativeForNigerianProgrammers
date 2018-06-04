@@ -6,11 +6,11 @@ import FirstList from "../Components/FirstList";
 
 export default class FirstTabScreen extends React.Component {
     onPress = () => {
-        this.props.navigation.navigate('InnerFirst', { item: 'Nigerian Developer 02-06-2018' })
-    }  
+        this.props.navigation.navigate('InnerFirst')
+    }
   render() {
     return (
-        <FirstList onPress={this.onPress} />
+        <FirstList navigation={this.props.navigation} />
     );
   }
 }

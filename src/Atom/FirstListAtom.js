@@ -4,14 +4,10 @@ import { Icon, ListItem, Left, Body, Right, Thumbnail } from "native-base";
 import { color } from "../Style/Color";
 import LottieAnimation from 'easy-lottie-react-native';
 
-export default class FirstListAtom extends React.Component {
-    onPress = () => {
-        const data = this.props.items.name;
-        this.props.navigation.navigate('InnerFirst', { item: data })
-    }
+class FirstListAtom extends React.Component {
   render() {
     return (
-        <ListItem onPress={this.onPress} style={styles.listItem} >
+        <ListItem onPress={this.props.onPress} style={styles.listItem} >
             <Left>
                 <LottieAnimation 
                     source={require('../Images/checked_done_.json')} 
@@ -30,6 +26,8 @@ export default class FirstListAtom extends React.Component {
     );
   }
 }
+
+export default FirstListAtom
 
 const styles = StyleSheet.create({
     animation: {

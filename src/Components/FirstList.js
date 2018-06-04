@@ -4,12 +4,12 @@ import FirstListAtom from "../Atom/FirstListAtom";
 import { products } from "../config/default";
 
 export default class FirstList extends React.Component {
-    onPress = () => {
-        this.props.navigation.navigate('InnerFirst')
+    onPress = ( data ) => {
+        this.props.navigation.navigate('InnerFirst', { item: data })
     }
     renderItem = ({ item }) => {
-        return <FirstListAtom items={item} />
-    }    
+        return <FirstListAtom items={item} navigation={this.props.navigation} onPress={() => this.props.navigation.navigate('InnerFirst', { item: item.name })} />
+    }
   render() {
     return (
         <View>
@@ -21,6 +21,7 @@ export default class FirstList extends React.Component {
                     data={products}
                     renderItem={this.renderItem}
                     keyExtractor={(item) => item.key.toString()}
+                    style={{marginBottom: 50}}
                 />
             </ScrollView>
         </View>
