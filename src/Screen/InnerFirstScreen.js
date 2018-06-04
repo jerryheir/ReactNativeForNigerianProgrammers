@@ -8,7 +8,7 @@ export default class InnerFirstScreen extends React.Component {
     const name = this.props.navigation.getParam('item', 'Oga Error')
     return (
         <View style={styles.container}>
-            <Text>{name}</Text>
+            <Text>You Clicked {name}</Text>
         </View>
     );
   }

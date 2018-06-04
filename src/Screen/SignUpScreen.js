@@ -11,17 +11,16 @@ import SignUpForm from '../Components/SignUpForm'
 import { color } from '../Style/Color'
 
 class SignUpScreen extends PureComponent {
+    login = () => {
+        this.props.navigation.goBack()
+    }
   render() {
     return (
       <View style={styles.container}>
         <ScrollView>
-          <View style={styles.wrapper}>
-            <Text style={styles.signUpText}>SIGN UP</Text>
-            <Text style={styles.personalInfoText}>PERSONAL INFORMATION</Text>
             <KeyboardAvoidingView behavior={'position'}>
-              <SignupForm navigation={this.props.navigation} />
+              <SignUpForm onClick={this.login} navigation={this.props.navigation} />
             </KeyboardAvoidingView>
-          </View>
         </ScrollView>
       </View>
     )

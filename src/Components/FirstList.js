@@ -8,7 +8,7 @@ export default class FirstList extends React.Component {
         this.props.navigation.navigate('InnerFirst')
     }
     renderItem = ({ item }) => {
-        return <FirstListAtom onPress={this.props.onPress} items={item} />
+        return <FirstListAtom items={item} />
     }    
   render() {
     return (

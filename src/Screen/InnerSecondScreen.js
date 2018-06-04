@@ -7,7 +7,7 @@ export default class InnerSecondScreen extends React.Component {
   render() {
     return (
         <View style={styles.container}>
-            <Text>You Click the Man driving a motorcycle</Text>
+            <Text>You Clicked the Man driving a motorcycle</Text>
         </View>
     );
   }

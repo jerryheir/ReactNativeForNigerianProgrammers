@@ -1,10 +1,14 @@
 import React from 'react'
 import { TouchableOpacity, Text, StyleSheet } from 'react-native'
-import { Icon, ListItem, Left, Body, Right } from "native-base";
+import { Icon, ListItem, Left, Body, Right, Thumbnail } from "native-base";
 import { color } from "../Style/Color";
 import LottieAnimation from 'easy-lottie-react-native';
 
 export default class FirstListAtom extends React.Component {
+    onPress = () => {
+        const data = this.props.items.name;
+        this.props.navigation.navigate('InnerFirst', { item: data })
+    }
   render() {
     return (
         <ListItem onPress={this.props.onPress} style={styles.listItem} >
@@ -17,8 +21,8 @@ export default class FirstListAtom extends React.Component {
             </Left>
             <Body style={styles.body}><Text style={styles.texty}>{this.props.items.name}</Text></Body>
             <Right>
-                <LottieAnimation 
-                    source={require('../Images/favourite_app_icon.json')} 
+                <Thumbnail
+                    source={require(this.props.items.image)} 
                     style={styles.anime}
                 />
             </Right>

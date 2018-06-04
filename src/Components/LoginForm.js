@@ -29,16 +29,16 @@ class LoginForm extends React.Component {
           <Thumbnail source={require('../Images/charity.jpg')} large style={{alignSelf: 'center'}} />
         </LinearGradient>
         <View style={{flex: 1}}>
-            <View style={{flex: 1}}>
-                <Form style={{marginTop: '30%', alignContent: 'center'}}>
+            <View style={{flex: 1, marginLeft: 0, marginRight: 10, paddingLeft: 0}}>
+                <Form style={{marginTop: '30%', marginLeft: 0, marginRight: 10, paddingLeft: 0}}>
                     <Item floatingLabel >
                         <Label style={{color: '#fff'}}>Code Name</Label>
-                        <Input style={{marginLeft: 0, marginRight: 10}} />
+                        <Input style={{marginLeft: 0, marginRight: 10, paddingLeft: 0}} />
                     </Item>
                     <Item floatingLabel>
                         <Label style={{color: '#fff'}}>Pass Code</Label>
                         <Input 
-                        style={{marginLeft: 0, marginRight: 10}}
+                        style={{marginLeft: 0, marginRight: 10, paddingLeft: 0}}
                         secureTextEntry={true}
                         keyboardType='numeric'
                         maxLength={6}

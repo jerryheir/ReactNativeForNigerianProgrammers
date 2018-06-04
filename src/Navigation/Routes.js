@@ -14,6 +14,7 @@ import FirstTabScreen from './../Screen/FirstTabScreen';
 import SecondTabScreen from './../Screen/SecondTabScreen';
 import InnerFirstScreen from './../Screen/InnerFirstScreen';
 import InnerSecondScreen from './../Screen/InnerSecondScreen';
+import FirstListAtom from "../Atom/FirstListAtom";
 
 import Sidebar from './Sidebar';
 import { color } from './../Style/Color';
@@ -69,7 +70,8 @@ const businessStack = createStackNavigator(
   {
     ViewBusiness: viewBusinessStack,
     InnerFirst: InnerFirstScreen,
-    InnerSecond: InnerSecondScreen
+    InnerSecond: InnerSecondScreen,
+    FirstList: FirstListAtom
   },
   {
     initialRouteName: 'ViewBusiness',
@@ -109,7 +111,7 @@ const DrawerStack = createDrawerNavigator(
 const AuthStack = createStackNavigator(
   {
     Login: LoginScreen,
-    Signup: SignUpScreen
+    SignUp: SignUpScreen
   },
   {
     headerMode: 'none'
